@@ -71,7 +71,7 @@ export default function StoresSection() {
                     href={store.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-[#E63946] text-sm font-semibold px-3 py-1.5 rounded-full shadow-md hover:bg-white transition"
+                    className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-[rgba(224,110,90,0.9)] text-sm font-semibold px-3 py-1.5 rounded-full shadow-md hover:bg-white transition"
                   >
                     <ExternalLink size={14} />
                     View on Map
@@ -82,7 +82,7 @@ export default function StoresSection() {
               {/* Store Info */}
               <div className="p-6 sm:p-5 md:p-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-red-500 shadow-sm flex-shrink-0">
+                  <div className="p-3 rounded-full bg-[rgba(224,110,90,0.9)] shadow-sm flex-shrink-0">
                     <MapPin size={20} className="text-white " />
                   </div>
                   <div className="flex-1">
