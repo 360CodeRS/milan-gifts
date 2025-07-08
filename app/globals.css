@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .font-fredoka {
+    font-family: "Quicksand", "Poppins", cursive, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 35s linear infinite;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e06e5a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c85843;
+}
+
+/* Soft shadows */
+.soft-shadow {
+  box-shadow: 0 4px 20px rgba(224, 110, 90, 0.15);
+}
+
+.soft-shadow:hover {
+  box-shadow: 0 8px 30px rgba(224, 110, 90, 0.25);
+}
+
+/* Focus styles */
+input:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #e06e5a;
+}
+
+/* Button animations */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Link hover effects */
+a {
+  transition: all 0.2s ease;
+}
+
+/* Mobile navigation drawer animation */
+@media (max-width: 768px) {
+  .mobile-drawer {
+    animation: slideDown 0.3s ease-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
