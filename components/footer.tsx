@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-white font-fredoka">
                 Milan Gifts
               </span>
-              <p className="text-sm text-[#A9C5A0] leading-tight">
+              <p className="text-sm text-[#A9C5A0] leading-tight mt-1">
                 Something for everyone
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="border-t border-[#4F4F4F] mt-10 pt-5 text-center">
         <p className="text-gray-500 text-sm">
-          © 2024 Milan Gifts. All rights reserved.
+          © 2025 Milan Gifts. All rights reserved.
         </p>
       </div>
     </footer>

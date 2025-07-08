@@ -50,6 +50,49 @@ const socialContent = [
     comments: "517",
     date: "1 day ago",
   },
+  {
+    id: 5,
+    platform: "facebook",
+    videoUrl: "/assets/Slow_Mo_Presents.mp4",
+    thumbnail: "/assets/Slow_Mo_Presents_frame.jpg",
+    username: "Milan Gifts",
+    caption: "Unboxing our deluxe gift box! 😍",
+    likes: "876",
+    comments: "54",
+    date: "1 week ago",
+  },
+  {
+    id: 6,
+    platform: "facebook",
+    videoUrl: "/assets/Slow_Mo_Presents.mp4",
+    thumbnail: "/assets/Slow_Mo_Presents_frame.jpg",
+    username: "Milan Gifts",
+    caption: "Unboxing our deluxe gift box! 😍",
+    likes: "876",
+    comments: "54",
+    date: "1 week ago",
+  },
+  {
+    id: 7,
+    platform: "instagram",
+    videoUrl: "/assets/Slow_Mo_Presents.mp4",
+    thumbnail: "/assets/Slow_Mo_Presents_frame.jpg",
+    username: "milan_gifts",
+    caption: "Our new jewelry collection has arrived! ✨",
+    likes: "2.4k",
+    comments: "156",
+    date: "2 days ago",
+  }, {
+    id: 8,
+    platform: "tiktok2",
+    videoUrl: "/assets/Slow_Mo_Presents.mp4",
+    thumbnail: "/assets/Slow_Mo_Presents_frame.jpg",
+    username: "giftsbymilan",
+    caption: "Satisfying packaging moments 🎬",
+    likes: "22.9k",
+    comments: "517",
+    date: "1 day ago",
+  },
 ]
 
 const platformBadgeColor: Record<string, string> = {
@@ -74,14 +117,11 @@ const PlatformIcon = ({ platform }: { platform: string }) => {
 }
 
 export default function SocialWall() {
-  const [activeFilter, setActiveFilter] = useState("all")
+  const [activeFilter, setActiveFilter] = useState("facebook")
   const [playingId, setPlayingId] = useState<number | null>(null)
   const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({})
 
-  const filteredContent =
-    activeFilter === "all"
-      ? socialContent
-      : socialContent.filter((item) => item.platform === activeFilter)
+  const filteredContent = socialContent.filter((item) => item.platform === activeFilter)
 
   const handleVideoClick = (id: number) => {
     const video = videoRefs.current[id]
@@ -107,18 +147,18 @@ export default function SocialWall() {
   }
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-white via-rose-50 to-yellow-50 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
+    <section id="social" className="py-12 px-6 bg-gradient-to-br from-white via-rose-50 to-yellow-50 relative overflow-hidden">
+      {/* <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[rgba(224,110,90,0.9)] blur-3xl" />
         <div className="absolute -bottom-32 left-12 w-96 h-96 rounded-full bg-[rgba(224,110,90,0.9)] blur-2xl" />
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 ">
-            Social Gallery
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1D3557] font-fredoka">
+            Social Wall
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium mt-2">
             See how our community celebrates gifting in style
           </p>
         </div>
@@ -126,7 +166,7 @@ export default function SocialWall() {
         {/* Filter Tabs */}
         <div className="flex justify-center mb-12">
           <div className="inline-flex bg-white/30 backdrop-blur-sm p-2 rounded-xl shadow-lg border border-white/40">
-            {["all", "facebook", "instagram", "tiktok1", "tiktok2"].map((platform) => (
+            {["facebook", "instagram", "tiktok1", "tiktok2"].map((platform) => (
               <button
                 key={platform}
                 onClick={() => setActiveFilter(platform)}

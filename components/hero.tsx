@@ -5,7 +5,7 @@ import RibbonSlider from "./ribbon-slider"
 
 export default function Hero() {
   return (
-    <section className="relative h-[95vh] sm:h-[95vh] md:h-[95vh] lg:h-[100vh] flex items-center overflow-hidden">
+    <section id = "home" className="relative h-[95vh] sm:h-[95vh] md:h-[95vh] lg:h-[100vh] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <div

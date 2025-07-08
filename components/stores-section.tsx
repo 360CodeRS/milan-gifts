@@ -26,7 +26,7 @@ export default function StoresSection() {
   ]
 
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-8">
+    <section id = "stores" className="py-16 px-4 sm:px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1D3557] font-fredoka">
