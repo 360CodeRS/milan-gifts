@@ -8,85 +8,94 @@ export default function StoresSection() {
     {
       address: "96 Serangoon Road",
       landmark: "Near Tekka Place",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/shop.png",
       mapUrl: "https://maps.google.com/?q=96+Serangoon+Road+Singapore",
     },
     {
       address: "244 Serangoon Road",
       landmark: "Near Mustafa",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/shop.png",
       mapUrl: "https://maps.google.com/?q=244+Serangoon+Road+Singapore",
     },
     {
       address: "242 Serangoon Road",
       landmark: "Opposite Masjid Angullia",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/shop.png",
       mapUrl: "https://maps.google.com/?q=242+Serangoon+Road+Singapore",
     },
   ]
 
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "#FAF7F2" }}>
+    <section className="py-16 px-4 sm:px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-fredoka" style={{ color: "#2F2F2F" }}>
+        <div className="text-center mb-14 md:mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1D3557] font-fredoka">
             Our Stores
           </h2>
-          <p className="text-lg" style={{ color: "#6F6F6F" }}>
-            Visit us at any of our convenient Serangoon Road locations
+          <p className="text-lg mt-2 text-[#1D3557]/70">
+            Visit us at any of our Serangoon Road locations
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {stores.map((store, index) => (
-            <a
+            <div
               key={index}
-              href={store.mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer"
-              style={{ border: "1px solid #E0DED9" }}
+              className="group bg-white rounded-3xl overflow-hidden border border-[#E0DED9] shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.03] cursor-pointer"
             >
-              <div className="relative overflow-hidden">
+              {/* Image Container */}
+              <div className="relative w-full h-48 sm:h-56 md:h-60">
                 <Image
-                  src={store.image || "/placeholder.svg"}
-                  alt={`Milan Gifts store at ${store.address}`}
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  src={store.image}
+                  alt={`Store at ${store.address}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
                 {/* Desktop Hover Overlay */}
-                <div className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center">
+                <a
+                  href={store.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center"
+                >
                   <div className="text-white text-center">
-                    <ExternalLink size={32} className="mx-auto mb-2" />
-                    <p className="font-semibold">View on Map</p>
+                    <ExternalLink size={28} className="mx-auto mb-1" />
+                    <p className="font-medium">View on Map</p>
                   </div>
-                </div>
+                </a>
 
-                {/* Mobile Indicator */}
-                <div className="md:hidden absolute top-4 right-4 bg-white/90 rounded-full p-2">
-                  <ExternalLink size={16} style={{ color: "#E06E5A" }} />
+                {/* Mobile & Tablet Map Button */}
+                <div className="md:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <a
+                    href={store.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-[#E63946] text-sm font-semibold px-3 py-1.5 rounded-full shadow-md hover:bg-white transition"
+                  >
+                    <ExternalLink size={14} />
+                    View on Map
+                  </a>
                 </div>
               </div>
 
-              <div className="p-6">
+              {/* Store Info */}
+              <div className="p-6 sm:p-5 md:p-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full" style={{ backgroundColor: "#A9C5A0" }}>
-                    <MapPin className="text-white" size={20} />
+                  <div className="p-3 rounded-full bg-red-500 shadow-sm flex-shrink-0">
+                    <MapPin size={20} className="text-white " />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-1" style={{ color: "#2F2F2F" }}>
+                    <h3 className="text-lg md:text-xl font-semibold text-[#1D3557] mb-1">
                       {store.address}
                     </h3>
-                    <p style={{ color: "#6F6F6F" }}>{store.landmark}</p>
-                    <p className="md:hidden text-sm mt-2 font-medium" style={{ color: "#E06E5A" }}>
-                      Tap to view on map
+                    <p className="text-[#1D3557]/70 text-sm md:text-base">
+                      {store.landmark}
                     </p>
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-gray-200 shadow-sm">
+      <nav className="hidden md:flex fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-gray-200 shadow-sm z-50">
         <div className="w-full max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
           {/* Logo */}
           <Link
