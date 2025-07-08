@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Milan Gifts',
   description: 'Milan Gifts - Your one-stop shop for unique and thoughtful gifts',
   icons: {
-    icon: '/assets/favicon.jpg',
+    icon: '/assets/favicon.png',
   },
 }
 

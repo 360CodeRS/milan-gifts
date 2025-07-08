@@ -165,25 +165,27 @@ export default function SocialWall() {
 
         {/* Filter Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white/30 backdrop-blur-sm p-2 rounded-xl shadow-lg border border-white/40">
-            {["facebook", "instagram", "tiktok1", "tiktok2"].map((platform) => (
-              <button
-                key={platform}
-                onClick={() => setActiveFilter(platform)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold capitalize transition-all duration-300 ${activeFilter === platform
-                  ? "bg-[rgba(224,110,90,0.9)] text-white shadow"
-                  : "text-gray-700 hover:bg-white/50"
-                  }`}
-              >
-                {platform === "tiktok1"
-                  ? "TikTok 1"
-                  : platform === "tiktok2"
-                    ? "TikTok 2"
-                    : platform}
-              </button>
-            ))}
-          </div>
-        </div>
+  <div className="inline-flex bg-white/30 backdrop-blur-sm p-2 rounded-full shadow-lg border border-white/40">
+    {["facebook", "instagram", "tiktok1", "tiktok2"].map((platform) => (
+      <button
+        key={platform}
+        onClick={() => setActiveFilter(platform)}
+        className={`px-6 py-2 rounded-full text-sm font-semibold capitalize transition-all duration-300
+          ${activeFilter === platform
+            ? "bg-[rgba(224,110,90,0.9)] text-white shadow"
+            : "text-gray-700 hover:bg-white/50"
+          }`}
+      >
+        {platform === "tiktok1"
+          ? "TikTok 1"
+          : platform === "tiktok2"
+            ? "TikTok 2"
+            : platform}
+      </button>
+    ))}
+  </div>
+</div>
+
 
         {/* Content Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
