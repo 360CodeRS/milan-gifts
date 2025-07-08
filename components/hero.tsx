@@ -7,10 +7,10 @@ export default function Hero() {
     <section className="relative h-[45vh] sm:h-[60vh] md:h-[55vh] lg:h-[65vh] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/assets/shop.jpg')",
+            backgroundImage: "url('/assets/christmas-gifts.jpg')",
           }}
         />
         {/* Overlay for better text readability */}
@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-20">
+      {/* <div className="absolute inset-0 opacity-20">
         <div
           className="absolute inset-0"
           style={{
@@ -27,7 +27,7 @@ export default function Hero() {
             backgroundSize: "60px 60px",
           }}
         />
-      </div>
+      </div> */}
 
       <div className="relative z-10 max-w-6xl mx-auto text-center px-3 sm:px-4">
         <div className="mb-3 sm:mb-4">
@@ -40,6 +40,7 @@ export default function Hero() {
         </div>
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 font-fredoka text-white drop-shadow-lg leading-tight">
+
           Welcome to Milan Gifts
         </h1>
 
