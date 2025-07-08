@@ -1,74 +1,116 @@
-"use client"
+"use client";
 
-import { Gift, Phone, MessageCircle, Facebook, Instagram, Music } from "lucide-react"
-import Link from "next/link"
+import { Gift, MessageCircle } from "lucide-react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-16 px-4" style={{ backgroundColor: "#2F2F2F" }}>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Brand Section */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div
-                className="w-12 h-12 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: "#E06E5A" }}
-              >
-                <Gift className="text-white" size={24} />
-              </div>
-              <div>
-                <span className="text-2xl font-bold text-white font-fredoka">Milan Gifts</span>
-                <p className="text-sm" style={{ color: "#A9C5A0" }}>
-                  Something for everyone
-                </p>
-              </div>
+    <footer className="bg-[#2F2F2F] py-14 px-4 md:px-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+        {/* Brand Section */}
+        <div className="max-w-md">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-11 h-11 rounded-full flex items-center justify-center bg-[#E06E5A]">
+              <Gift className="text-white" size={22} />
             </div>
-            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-              Your trusted destination for the perfect gift. From jewelry to accessories, we help you celebrate every
-              special moment.
-            </p>
-          </div>
-
-          {/* Contact & Social */}
-          <div>
-            <h3 className="font-bold text-lg mb-6 text-white">Connect With Us</h3>
-            <div className="space-y-4 mb-6">
-              <div className="flex items-center gap-3">
-                <Phone size={16} style={{ color: "#A9C5A0" }} />
-                <span className="text-gray-400">+65 8968 8896</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MessageCircle size={16} style={{ color: "#A9C5A0" }} />
-                <span className="text-gray-400">WhatsApp</span>
-              </div>
-            </div>
-
-            <div className="flex gap-3">
-              {[
-                { icon: Facebook, color: "#1877F2" },
-                { icon: Instagram, color: "#E4405F" },
-                { icon: Music, color: "#000000" },
-                { icon: Music, color: "#000000" },
-              ].map((social, index) => (
-                <Link
-                  key={index}
-                  href="#"
-                  className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                  style={{ backgroundColor: social.color }}
-                >
-                  <social.icon size={18} className="text-white" />
-                </Link>
-              ))}
+            <div>
+              <span className="text-xl font-bold text-white font-fredoka">
+                Milan Gifts
+              </span>
+              <p className="text-sm text-[#A9C5A0] leading-tight">
+                Something for everyone
+              </p>
             </div>
           </div>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Your trusted destination for the perfect gift. From jewelry to
+            accessories, we help you celebrate every special moment.
+          </p>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t pt-8 text-center" style={{ borderColor: "#4F4F4F" }}>
-          <p className="text-gray-500">© 2024 Milan Gifts. All rights reserved.</p>
+        {/* Contact & Social */}
+        <div className="space-y-6">
+          {/* WhatsApp */}
+          <div>
+            <h3 className="font-semibold text-white text-base mb-3">
+              Connect With Us
+            </h3>
+            <div className="space-y-3 text-sm">
+              <a
+                href="https://wa.me/6589688896"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <MessageCircle size={16} className="text-[#A9C5A0]" />
+                <span className="text-gray-400">WhatsApp: +65 8968 8896</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Social Links with Labels */}
+          <div className="flex gap-4">
+            {/* Facebook */}
+            <div className="flex flex-col items-center space-y-1">
+              <Link
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full flex items-center justify-center bg-[#1877F2] hover:scale-110 transition-transform"
+              >
+                <FaFacebookF className="text-white text-[16px]" />
+              </Link>
+            </div>
+
+            {/* Instagram */}
+            <div className="flex flex-col items-center space-y-1">
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full flex items-center justify-center bg-[#E4405F] hover:scale-110 transition-transform"
+              >
+                <FaInstagram className="text-white text-[16px]" />
+              </Link>
+            </div>
+
+            {/* TikTok - Main */}
+            <div className="flex flex-col items-center space-y-1">
+              <Link
+                href="https://tiktok.com/@mainaccount"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full flex items-center justify-center bg-black hover:scale-110 transition-transform"
+              >
+                <SiTiktok className="text-white text-[16px]" />
+              </Link>
+              <span className="text-xs text-gray-400"> Main</span>
+            </div>
+
+            {/* TikTok - Events */}
+            <div className="flex flex-col items-center space-y-1">
+              <Link
+                href="https://tiktok.com/@eventsaccount"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full flex items-center justify-center bg-black hover:scale-110 transition-transform"
+              >
+                <SiTiktok className="text-white text-[16px]" />
+              </Link>
+              <span className="text-xs text-gray-400">Events</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Footer Bottom */}
+      <div className="border-t border-[#4F4F4F] mt-10 pt-5 text-center">
+        <p className="text-gray-500 text-sm">
+          © 2024 Milan Gifts. All rights reserved.
+        </p>
+      </div>
     </footer>
-  )
+  );
 }
