@@ -11,9 +11,10 @@ const categories = [
 
 export default function CategoryGallery() {
   return (
-    <section className="py-12 px-4 max-w-7xl mx-auto">
+    <section id="categories" className="py-12 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-extrabold text-gray-900">Explore Our Categories</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-[#1D3557] font-fredoka">
+          Explore Our Categories</h2>
         <p className="text-gray-500 mt-2 text-lg">Discover a range of curated collections just for you.</p>
       </div>
 
@@ -30,7 +31,7 @@ export default function CategoryGallery() {
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent text-white p-6">
               <h3 className="text-xl font-semibold">{category.name}</h3>
-            
+
             </div>
           </div>
         ))}

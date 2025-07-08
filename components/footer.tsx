@@ -84,7 +84,7 @@ export default function Footer() {
             {/* TikTok - Main */}
             <div className="flex flex-col items-center space-y-1">
               <Link
-                href="https://tiktok.com/@mainaccount"
+                href="https://www.tiktok.com/discover/milan-gift-sg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full flex items-center justify-center bg-black hover:scale-110 transition-transform"
@@ -97,7 +97,7 @@ export default function Footer() {
             {/* TikTok - Jewellery */}
             <div className="flex flex-col items-center space-y-1">
               <Link
-                href="https://tiktok.com/@eventsaccount"
+                href="https://www.tiktok.com/discover/milan-gift-sg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full flex items-center justify-center bg-black hover:scale-110 transition-transform"
