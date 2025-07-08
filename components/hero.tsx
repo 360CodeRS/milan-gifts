@@ -1,10 +1,11 @@
 "use client"
 
 import { Gift } from "lucide-react"
+import RibbonSlider from "./ribbon-slider"
 
 export default function Hero() {
   return (
-    <section className="relative h-[45vh] sm:h-[60vh] md:h-[55vh] lg:h-[65vh] flex items-center overflow-hidden">
+    <section className="relative h-[95vh] sm:h-[95vh] md:h-[95vh] lg:h-[100vh] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <div
@@ -65,6 +66,9 @@ export default function Hero() {
         >
           Explore Our Stores
         </button>
+      </div>
+      <div className="absolute bottom-10 left-0 right-0 ">
+        <RibbonSlider />
       </div>
     </section>
   )
