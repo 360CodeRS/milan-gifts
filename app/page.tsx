@@ -18,7 +18,6 @@ export default function HomePage() {
       <StoresSection />
       <CategoryGallery />
       <SocialWall />
-      <ContactSection />
       <Footer />
     </div>
   )
