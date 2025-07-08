@@ -4,50 +4,62 @@ import { Gift } from "lucide-react"
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 md:pt-24 pb-20 px-4 overflow-hidden" style={{ backgroundColor: "#FAF7F2" }}>
+    <section className="relative h-[45vh] sm:h-[60vh] md:h-[55vh] lg:h-[65vh] flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/assets/shop.jpg')",
+          }}
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 25% 25%, #E06E5A 1px, transparent 1px),
                            radial-gradient(circle at 75% 75%, #A9C5A0 1px, transparent 1px)`,
-            backgroundSize: "80px 80px",
+            backgroundSize: "60px 60px",
           }}
-        ></div>
+        />
       </div>
 
-      <div className="relative max-w-6xl mx-auto text-center">
-        <div className="mb-8">
+      <div className="relative z-10 max-w-6xl mx-auto text-center px-3 sm:px-4">
+        <div className="mb-3 sm:mb-4">
           <div
-            className="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6 shadow-lg"
-            style={{ backgroundColor: "#E06E5A" }}
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mx-auto rounded-full flex items-center justify-center mb-2 sm:mb-3 shadow-xl backdrop-blur-sm"
+            style={{ backgroundColor: "rgba(224, 110, 90, 0.9)" }}
           >
-            <Gift className="text-white" size={28} />
+            <Gift className="text-white" size={16} />
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 font-fredoka" style={{ color: "#2F2F2F" }}>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 font-fredoka text-white drop-shadow-lg leading-tight">
           Welcome to Milan Gifts
         </h1>
 
-        <p className="text-2xl md:text-3xl mb-8 font-medium" style={{ color: "#E06E5A" }}>
+        <p className="text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 font-medium text-white drop-shadow-md">
           Something for everyone
         </p>
 
-        <p className="text-lg mb-12 max-w-2xl mx-auto leading-relaxed" style={{ color: "#6F6F6F" }}>
+        <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 max-w-xl lg:max-w-2xl mx-auto leading-relaxed text-white/90 drop-shadow-sm">
           Discover the perfect gift for every occasion. From elegant jewelry to trendy accessories, we have everything
           you need to make someone smile.
         </p>
 
         <button
-          className="px-8 py-4 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          style={{ backgroundColor: "#E06E5A" }}
+          className="px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm text-sm sm:text-base"
+          style={{ backgroundColor: "rgba(224, 110, 90, 0.9)" }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "#C85843"
+            e.currentTarget.style.backgroundColor = "rgba(200, 88, 67, 0.9)"
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "#E06E5A"
+            e.currentTarget.style.backgroundColor = "rgba(224, 110, 90, 0.9)"
           }}
         >
           Explore Our Stores
