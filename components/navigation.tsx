@@ -59,15 +59,20 @@ export default function Navigation() {
   const getLinkClass = (href: string) => {
     const sectionId = href.replace('#', '');
     const isActive = activeSection === sectionId;
-    
+  
     return cn(
+      // Base styles (mobile)
       "relative text-black px-1 py-1 transition-all duration-300",
-      "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-black after:transition-all after:duration-300",
-      isActive 
-        ? "after:w-full font-medium" 
-        : "after:w-0 hover:after:w-full"
+  
+      // Desktop underline effect only (starts with md)
+      "md:after:content-[''] md:after:absolute md:after:left-0 md:after:bottom-0 md:after:h-[1.5px] md:after:bg-black md:after:transition-all md:after:duration-300",
+  
+      isActive
+        ? "md:after:w-full font-medium"
+        : "md:after:w-0 md:hover:after:w-full"
     );
   };
+  
 
   return (
     <>
