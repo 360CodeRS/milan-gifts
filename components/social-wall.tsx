@@ -14,7 +14,7 @@ const socialContent = [
     thumbnail: "/assets/Slow_Mo_Presents_frame.jpg",
     username: "milan_gifts",
     caption:
-      "Introducing elegance: our handcrafted jewelry in dreamy slow motion ✨",
+      "Introducing elegance: our handcrafted jewellery in dreamy slow motion ✨",
     likes: "2.4k",
     comments: "156",
     date: "2 days ago",
@@ -49,7 +49,7 @@ const socialContent = [
     thumbnail: "/assets/Slow_Mo_Presents_frame.jpg",
     username: "milan_jewellery",
     caption:
-      "Drape your elegance in slow motion – the way jewelry should move 💍✨",
+      "Drape your elegance in slow motion – the way jewellery should move 💍✨",
     likes: "22.9k",
     comments: "517",
     date: "1 day ago",
@@ -93,7 +93,7 @@ const socialContent = [
     videoUrl: "/assets/Slow_Mo_Presents.mp4",
     thumbnail: "/assets/Slow_Mo_Presents_frame.jpg",
     username: "milan_jewellery",
-    caption: "Satisfy your sparkle cravings — jewelry that speaks  💫",
+    caption: "Satisfy your sparkle cravings — jewellery that speaks  💫",
     likes: "22.9k",
     comments: "517",
     date: "1 day ago",

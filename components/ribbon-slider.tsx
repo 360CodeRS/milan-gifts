@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 const categories = [
-  { name: "Jewelry", icon: Gem, color: "#FFD700" },
+  { name: "Jewellery", icon: Gem, color: "#FFD700" },
   { name: "Watches", icon: Watch, color: "#FF6B6B" },
   { name: "Makeup", icon: Palette, color: "#4ECDC4" },
   { name: "Toys", icon: Gamepad2, color: "#45B7D1" },

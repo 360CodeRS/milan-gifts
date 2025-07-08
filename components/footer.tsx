@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Your trusted destination for the perfect gift. From jewelry to
+            Your trusted destination for the perfect gift. From jewellery to
             accessories, we help you celebrate every special moment.
           </p>
         </div>

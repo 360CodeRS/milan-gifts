@@ -54,7 +54,7 @@ export default function Hero() {
         </p>
 
         <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 max-w-xl lg:max-w-2xl mx-auto leading-relaxed text-white/90 drop-shadow-sm">
-          Discover the perfect gift for every occasion. From elegant jewelry to trendy accessories, we have everything
+          Discover the perfect gift for every occasion. From elegant jewellery to trendy accessories, we have everything
           you need to make someone smile.
         </p>
 
