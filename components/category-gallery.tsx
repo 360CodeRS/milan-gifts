@@ -1,46 +1,62 @@
 "use client"
+import Image from "next/image"
 
-import { Gem, Watch, Palette, Scissors, Gamepad2, GlassesIcon as Sunglasses, Sparkles } from "lucide-react"
+const categories = [
+  { id: 1, name: "Jewellery", description: "Elegant & Timeless", image: "/assets/open-gifts-box.jpg" },
+  { id: 2, name: "Watches for Men", description: "Classic & Sophisticated", image: "/assets/open-gifts-box.jpg" },
+  { id: 3, name: "Makeup", description: "Beauty & Glamour", image: "/assets/open-gifts-box.jpg" },
+  { id: 4, name: "Hair Clips", description: "Stylish & Chic", image: "/assets/open-gifts-box.jpg" },
+  { id: 5, name: "Toys", description: "Fun & Delightful", image: "/assets/open-gifts-box.jpg" },
+  { id: 6, name: "Sunglasses", description: "Trendy & Protective", image: "/assets/open-gifts-box.jpg" },
+  { id: 7, name: "Nails", description: "Creative & Colorful", image: "/assets/open-gifts-box.jpg" },
+  { id: 8, name: "Watches for Ladies", description: "Graceful & Refined", image: "/assets/open-gifts-box.jpg" },
+  { id: 9, name: "Shoes", description: "Comfort & Style", image: "/assets/open-gifts-box.jpg" },
+  { id: 10, name: "Belts", description: "Quality & Craftsmanship", image: "/assets/open-gifts-box.jpg" },
+]
 
 export default function CategoryGallery() {
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "white" }}>
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-6 bg-gray-100">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-fredoka" style={{ color: "#2F2F2F" }}>
+          <h2 className="text-5xl font-semibold text-gray-900 tracking-tight">
             Product Categories
           </h2>
-          <p className="text-lg" style={{ color: "#6F6F6F" }}>
-            Explore our carefully curated collection
+          <p className="mt-4 text-lg text-gray-600">
+            Explore timeless, premium picks for every style.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { name: "Jewellery", icon: Gem, color: "#E06E5A" },
-            { name: "Watches for Men", icon: Watch, color: "#A9C5A0" },
-            { name: "Makeup", icon: Palette, color: "#F2D16D" },
-            { name: "Hair Clips", icon: Scissors, color: "#E06E5A" },
-            { name: "Toys", icon: Gamepad2, color: "#A9C5A0" },
-            { name: "Sunglasses", icon: Sunglasses, color: "#F2D16D" },
-            { name: "Nails", icon: Sparkles, color: "#E06E5A" },
-            { name: "Watches for Ladies", icon: Watch, color: "#A9C5A0" },
-          ].map((category, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div
-                className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                style={{ border: "1px solid #E0DED9" }}
-              >
-                <div
-                  className="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
-                  style={{ backgroundColor: category.color + "20" }}
-                >
-                  <category.icon size={32} style={{ color: category.color }} />
-                </div>
-                <h3 className="font-semibold text-sm" style={{ color: "#2F2F2F" }}>
+        {/* Glass Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {categories.map((category) => (
+            <div
+              key={category.id}
+              className="relative backdrop-blur-md bg-white/30 border border-white/20 shadow-lg rounded-2xl overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              {/* Image */}
+              <div className="relative h-52 w-full">
+                <Image
+                  src={category.image}
+                  alt={category.name}
+                  fill
+                  className="object-cover"
+                />
+                {/* Frost overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-t-2xl" />
+              </div>
+
+              {/* Content */}
+              <div className="p-6 relative z-10">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">
                   {category.name}
                 </h3>
+                <p className="text-sm text-gray-600">{category.description}</p>
               </div>
+
+              {/* Soft glow ring on hover */}
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-white/20 group-hover:ring-white/30 transition duration-300 pointer-events-none" />
             </div>
           ))}
         </div>
