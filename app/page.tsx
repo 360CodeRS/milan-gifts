@@ -10,7 +10,7 @@ import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#FAF7F2" }}>
+    <div className="min-h-screen bg-gradient-to-br from-white via-rose-50 to-sky-50">
 
       <Navigation />
       {/* <CategorySlider />   */}

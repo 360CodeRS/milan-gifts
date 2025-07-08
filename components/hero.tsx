@@ -2,11 +2,15 @@
 
 import { Gift } from "lucide-react"
 import RibbonSlider from "./ribbon-slider"
+import { CiShop } from "react-icons/ci"
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-[95vh] sm:h-[95vh] md:h-[95vh] lg:h-[100vh] flex items-center overflow-hidden">
-      {/* Background Image */}
+    <section
+  id="home"
+  className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden"
+>
+{/* Background Image */}
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -55,29 +59,22 @@ export default function Hero() {
         </p>
 
         <button
-          className="px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm text-sm sm:text-base"
-          style={{ backgroundColor: "rgba(224, 110, 90, 0.9)" }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(200, 88, 67, 0.9)"
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(224, 110, 90, 0.9)"
-          }}
-          onClick={() => {
-            const storesSection = document.getElementById('stores');
-            if (storesSection) {
-              const navHeight = 120; // Adjust based on your nav height
-              const targetPosition = storesSection.offsetTop - navHeight;
+  className="group inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm text-sm sm:text-base bg-[rgba(224,110,90,0.9)] hover:bg-[rgba(200,88,67,0.9)]"
+  onClick={() => {
+    const storesSection = document.getElementById('stores');
+    if (storesSection) {
+      const navHeight = 120; // adjust if needed
+      const targetPosition = storesSection.offsetTop - navHeight;
 
-              window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-              });
-            }
-          }}
-        >
-          Explore Our Stores
-        </button>
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }}
+>
+<CiShop size={20} className="mr-2 text-white" strokeWidth={2} />Explore Our Stores
+</button>
 
       </div>
       <div className="absolute bottom-10 left-0 right-0 ">

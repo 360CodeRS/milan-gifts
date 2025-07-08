@@ -80,7 +80,7 @@ export default function RibbonSlider() {
             >
               {tripleCategories.map((category, index) => (
                 <React.Fragment key={`${category.name}-${index}`}>
-                  <div className="inline-flex items-center mx-2 sm:mx-3 md:mx-4 group cursor-pointer">
+                  <div className="inline-flex items-center mx-2 sm:mx-3 md:mx-4 group cursor-default">
                     <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 hover:scale-105 transition-all duration-300">
                       <category.icon
                         size={14}
