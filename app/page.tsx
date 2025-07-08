@@ -17,8 +17,8 @@ export default function HomePage() {
       <Hero />
 
       <StoresSection />
-      <CategoryGallery />
       <SocialWall />
+      <CategoryGallery />
       <Footer />
     </div>
   );

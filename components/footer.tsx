@@ -16,7 +16,12 @@ export default function Footer() {
               <Gift className="text-white" size={22} />
             </div>
             <div>
-              <span className="text-xl font-bold text-white font-fredoka">
+              <span className="text-3xl font-bold text-white font-fredoka"
+                style={{
+                  fontFamily: "'Dancing Script', cursive",
+                  color: "white",
+                }}
+              >
                 Milan Gifts
               </span>
               <p className="text-sm text-[#A9C5A0] leading-tight mt-1">
@@ -55,7 +60,7 @@ export default function Footer() {
             {/* Facebook */}
             <div className="flex flex-col items-center space-y-1">
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/milangiftssg/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full flex items-center justify-center bg-[#1877F2] hover:scale-110 transition-transform"
@@ -67,7 +72,7 @@ export default function Footer() {
             {/* Instagram */}
             <div className="flex flex-col items-center space-y-1">
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/milangifts.singapore"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full flex items-center justify-center bg-[#E4405F] hover:scale-110 transition-transform"
@@ -89,7 +94,7 @@ export default function Footer() {
               <span className="text-xs text-gray-400"> Main</span>
             </div>
 
-            {/* TikTok - Events */}
+            {/* TikTok - Jewellery */}
             <div className="flex flex-col items-center space-y-1">
               <Link
                 href="https://tiktok.com/@eventsaccount"
@@ -99,7 +104,7 @@ export default function Footer() {
               >
                 <SiTiktok className="text-white text-[16px]" />
               </Link>
-              <span className="text-xs text-gray-400">Events</span>
+              <span className="text-xs text-gray-400">Jewellery</span>
             </div>
           </div>
         </div>

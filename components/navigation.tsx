@@ -39,7 +39,7 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = links.map(link => link.href.replace('#', ''));
-      const scrollPosition = window.scrollY + 100; // Offset for nav height
+      const scrollPosition = window.scrollY + 130; // Offset for nav height
       
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);

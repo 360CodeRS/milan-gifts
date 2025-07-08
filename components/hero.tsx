@@ -5,7 +5,7 @@ import RibbonSlider from "./ribbon-slider"
 
 export default function Hero() {
   return (
-    <section id = "home" className="relative h-[95vh] sm:h-[95vh] md:h-[95vh] lg:h-[100vh] flex items-center overflow-hidden">
+    <section id="home" className="relative h-[95vh] sm:h-[95vh] md:h-[95vh] lg:h-[100vh] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <div
@@ -36,7 +36,7 @@ export default function Hero() {
             className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mx-auto rounded-full flex items-center justify-center mb-2 sm:mb-3 shadow-xl backdrop-blur-sm"
             style={{ backgroundColor: "rgba(224, 110, 90, 0.9)" }}
           >
-            <Gift className="text-white" size={16} />
+            <Gift className="text-white" size={28} />
           </div>
         </div>
 
@@ -63,9 +63,22 @@ export default function Hero() {
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = "rgba(224, 110, 90, 0.9)"
           }}
+          onClick={() => {
+            const storesSection = document.getElementById('stores');
+            if (storesSection) {
+              const navHeight = 120; // Adjust based on your nav height
+              const targetPosition = storesSection.offsetTop - navHeight;
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }}
         >
           Explore Our Stores
         </button>
+
       </div>
       <div className="absolute bottom-10 left-0 right-0 ">
         <RibbonSlider />

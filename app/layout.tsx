@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Milan Gifts',
   description: 'Milan Gifts - Your one-stop shop for unique and thoughtful gifts',
+  icons: {
+    icon: '/assets/favicon.jpg',
+  },
 }
 
 export default function RootLayout({
