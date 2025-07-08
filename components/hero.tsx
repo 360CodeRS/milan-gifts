@@ -6,21 +6,20 @@ import { CiShop } from "react-icons/ci"
 
 export default function Hero() {
   return (
-    <section
+<section
   id="home"
-  className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden"
+  className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden bg-[#fdf7f4]"
 >
-{/* Background Image */}
-      <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/assets/hero.jpg')",
-          }}
-        />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <div
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/assets/hero.jpg')",
+      }}
+    />
+    <div className="absolute inset-0 bg-black/50" />
+  </div>
 
       {/* Subtle background pattern */}
       {/* <div className="absolute inset-0 opacity-20">
