@@ -55,9 +55,9 @@ export default function SocialFilter({
               `}
             >
               {platform === "tiktok1"
-                ? "TikTok 1"
+                ? "TikTok Main"
                 : platform === "tiktok2"
-                ? "TikTok 2"
+                ? "TikTok Jewellery"
                 : platform}
             </button>
           ))}
@@ -89,13 +89,13 @@ export default function SocialFilter({
               `}
             >
               {platform === "tiktok1"
-                ? "TikTok 1"
+                ? "TikTok Main"
                 : platform === "tiktok2"
-                ? "TikTok 2"
+                ? "TikTok Jewellery"
                 : platform}
             </button>
           ))}
-        </div>
+        </div>  
       </div>
     </div>
   );
