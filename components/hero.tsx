@@ -1,38 +1,32 @@
-"use client"
+"use client";
 
-import { Gift } from "lucide-react"
-import RibbonSlider from "./ribbon-slider"
-import { CiShop } from "react-icons/ci"
+import Image from "next/image";
+import { Gift } from "lucide-react";
+import { CiShop } from "react-icons/ci";
+import RibbonSlider from "./ribbon-slider";
 
 export default function Hero() {
   return (
-<section
-  id="home"
-  className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden bg-[#fdf7f4]"
->
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <div
-      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: "url('/assets/hero.jpg')",
-      }}
-    />
-    <div className="absolute inset-0 bg-black/50" />
-  </div>
+    <section
+    id="home"
+    className="relative z-0 min-h-[90vh] md:min-h-screen flex items-center overflow-hidden bg-[#fdf7f4]"
+  >
+  
+      {/* Background Image using next/image */}
+      <div className="absolute inset-0 -z-10">
+        <div className="relative w-full h-full min-h-[90vh] md:min-h-screen">
+          <Image
+            src="/assets/hero.jpg"
+            alt="Hero Background"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
 
-      {/* Subtle background pattern */}
-      {/* <div className="absolute inset-0 opacity-20">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, #E06E5A 1px, transparent 1px),
-                           radial-gradient(circle at 75% 75%, #A9C5A0 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
-          }}
-        />
-      </div> */}
-
+      {/* Hero Text and Button */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-3 sm:px-4">
         <div className="mb-3 sm:mb-4">
           <div
@@ -44,7 +38,6 @@ export default function Hero() {
         </div>
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 font-fredoka text-white drop-shadow-lg leading-tight">
-
           Welcome to Milan Gifts
         </h1>
 
@@ -58,27 +51,25 @@ export default function Hero() {
         </p>
 
         <button
-  className="group inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm text-sm sm:text-base bg-[rgba(224,110,90,0.9)] hover:bg-[rgba(200,88,67,0.9)]"
-  onClick={() => {
-    const storesSection = document.getElementById('stores');
-    if (storesSection) {
-      const navHeight = 120; // adjust if needed
-      const targetPosition = storesSection.offsetTop - navHeight;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth',
-      });
-    }
-  }}
->
-<CiShop size={20} className="mr-2 text-white" strokeWidth={2} />Explore Our Stores
-</button>
-
+          className="group inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm text-sm sm:text-base bg-[rgba(224,110,90,0.9)] hover:bg-[rgba(200,88,67,0.9)]"
+          onClick={() => {
+            const storesSection = document.getElementById("stores");
+            if (storesSection) {
+              const navHeight = 120;
+              const targetPosition = storesSection.offsetTop - navHeight;
+              window.scrollTo({ top: targetPosition, behavior: "smooth" });
+            }
+          }}
+        >
+          <CiShop size={20} className="mr-2 text-white" strokeWidth={2} />
+          Explore Our Stores
+        </button>
       </div>
-      <div className="absolute bottom-10 left-0 right-0 ">
+
+      {/* Bottom Ribbon Slider */}
+      <div className="absolute bottom-10 left-0 right-0">
         <RibbonSlider />
       </div>
     </section>
-  )
+  );
 }

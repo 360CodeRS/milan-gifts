@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Milan Gifts",
@@ -18,9 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="preload" as="image" href="/assets/hero.jpg" />
-      </Head>
       <body>{children}</body>
     </html>
   );
